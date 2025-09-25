@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Card panel */
+.dcc-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+  max-width: 650px; /* stable width */
+  min-width: 650px; /* prevents shrinking */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs stable with border-box */
+.dcc-form input,
+.dcc-form textarea,
+.dcc-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+
+  /* prevent jump when focused */
+  outline: none;
+}
+
+.dcc-form input:focus,
+.dcc-form textarea:focus,
+.dcc-form select:focus {
+  border: 1px solid #004080; /* brand color focus */
+  box-shadow: 0 0 4px rgba(0, 64, 128, 0.3); /* glow */
+}
+
+.dcc-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.dcc-logo {
+  width: 100px;
+  margin: 0 auto 0.5rem auto;
+}
+
+.dcc-title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1a1a4b; /* DCC navy */
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* ensures padding doesn’t expand width */
+}
+
+fieldset {
+  border: 1px solid #1a1a4b;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+legend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d11a2a;
+}
+
+.btn {
+  background: linear-gradient(90deg, #d11a2a 0%, #1a1a4b 100%);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem auto 0 auto;
+  display: block;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #b01020 0%, #14143a 100%);
+}
