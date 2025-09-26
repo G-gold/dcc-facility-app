@@ -21,18 +21,18 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0.5rem;
-  overflow: hidden; /* 🚫 stop scrolling */
+  /* overflow: hidden; 🚫 stop scrolling */
 }
 
 .container {
   background: #fff;
   padding: 1rem;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 340px;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .dcc-logo {
@@ -79,8 +79,8 @@ input {
   color: white;
   border: none;
   border-radius: 999px;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
   margin-top: 0.8rem;
