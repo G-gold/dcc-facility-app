@@ -1,14 +1,7 @@
 :root {
-  --white: #e9e9e9;
+  --white: #fff;
   --blue: #0367a6;
   --lightblue: #008997;
-  --max-width: 420px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 body {
@@ -20,58 +13,56 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 0.5rem;
-  /* overflow: hidden; 🚫 stop scrolling */
+  padding: 1rem;
 }
 
 .container {
-  background: #fff;
-  padding: 1rem;
+  background: var(--white);
+  padding: 1.2rem;
   border-radius: 1rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 340px;
   text-align: center;
-  /* overflow: hidden; */
 }
 
 .dcc-logo {
-  width: 60px;
-  margin-bottom: 0.5rem;
+  width: 70px;
+  margin-bottom: 1rem;
 }
 
 .title {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--blue);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 fieldset {
   border: 1px solid #ddd;
-  border-radius: 0.4rem;
-  padding: 0.6rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
   text-align: left;
 }
 
 legend {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--blue);
 }
 
 input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   border-radius: 0.4rem;
   border: 1px solid #ccc;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .btn {
@@ -79,32 +70,15 @@ input {
   color: white;
   border: none;
   border-radius: 999px;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
   margin-top: 0.8rem;
   display: inline-block;
-  width: auto; /* 🔙 small size */
+  width: auto;
 }
 
 .btn:hover {
   background: linear-gradient(90deg, #025c92 0%, #007a86 74%);
-}
-
-/* 📱 Smallest screen adjustments */
-@media (max-width: 400px) {
-  .container {
-    max-width: 100%;
-    padding: 0.8rem;
-  }
-
-  .title {
-    font-size: 0.9rem;
-  }
-
-  input {
-    font-size: 0.75rem;
-    padding: 0.45rem;
-  }
 }

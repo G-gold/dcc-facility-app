@@ -1,66 +1,100 @@
 :root {
-  --white: #e9e9e9;
+  --white: #fff;
   --blue: #0367a6;
   --lightblue: #008997;
-  --max-width: 420px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 body {
-  background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  min-height: 100vh;
-  margin: 0;
-
-  /* ✅ Respect iOS safe areas without breaking layout */
-  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0)
-    env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
 }
 
-.container {
-  background: #fff; /* white card back */
+.dcc-container {
+  background: var(--white);
+  margin: 1rem;
   padding: 1rem;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-
   width: 100%;
-  max-width: 340px;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.dcc-header {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .dcc-logo {
-  width: 60px;
-  margin-bottom: 0.8rem;
+  width: 70px;
+  margin-bottom: 0.5rem;
 }
 
-.title {
-  margin-bottom: 1rem;
+.dcc-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  font-size: 1rem;
   color: var(--blue);
 }
 
-form {
+.dcc-form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  width: 100%;
+  gap: 1rem;
 }
 
 fieldset {
   border: 1px solid #ddd;
   border-radius: 0.5rem;
+  padding: 0.8rem;
+}
+
+legend {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
   padding: 0.6rem;
-  margin: 0;
+  margin-bottom: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.btn {
+  background: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  width: auto;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #025c92 0%, #007a86 74%);
 }
