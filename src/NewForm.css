@@ -1,100 +1,105 @@
-:root {
-  --white: #fff;
-  --blue: #0367a6;
-  --lightblue: #008997;
-}
-
+/* NewForm.css */
 body {
-  background: #f0f4f8;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
+  background: #f9f9f9;
 }
 
 .dcc-container {
-  background: var(--white);
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dcc-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
   width: 100%;
-  max-width: 420px;
-  box-sizing: border-box;
+  max-width: 420px; /* keeps form centered & not too wide */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dcc-header {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 .dcc-logo {
-  width: 70px;
-  margin-bottom: 0.5rem;
+  width: 80px;
+  margin-bottom: 10px;
 }
 
 .dcc-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--blue);
-}
-
-.dcc-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  font-size: 20px;
+  margin: 0;
+  color: #333;
 }
 
 fieldset {
   border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  padding: 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
 legend {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--blue);
-}
-
-label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-size: 0.8rem;
-  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 6px;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 0.6rem;
-  margin-bottom: 0.6rem;
-  border-radius: 0.4rem;
+  padding: 10px;
+  margin-top: 6px;
   border: 1px solid #ccc;
-  font-size: 0.85rem;
+  border-radius: 6px;
+  font-size: 14px;
   box-sizing: border-box;
 }
 
 textarea {
-  min-height: 60px;
   resize: vertical;
+  min-height: 70px;
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .btn {
-  background: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
-  color: white;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  background: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 999px;
-  padding: 0.6rem 1rem;
-  font-size: 0.9rem;
-  font-weight: bold;
+  border-radius: 6px;
   cursor: pointer;
-  align-self: center;
-  width: auto;
+  transition: background 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #025c92 0%, #007a86 74%);
+  background: #0056b3;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .dcc-form {
+    padding: 15px;
+  }
+
+  .dcc-title {
+    font-size: 18px;
+  }
 }
