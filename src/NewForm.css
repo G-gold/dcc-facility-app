@@ -1,105 +1,126 @@
-/* NewForm.css */
+:root {
+  --white: #ffffff;
+  --blue: #0367a6;
+  --lightblue: #008997;
+  --max-width: 480px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 👈 Keep logo/title visible at top */
+  min-height: 100vh;
 }
 
 .dcc-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-.dcc-form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 420px; /* keeps form centered & not too wide */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: var(--max-width);
+  margin: auto;
 }
 
 .dcc-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .dcc-logo {
-  width: 80px;
-  margin-bottom: 10px;
+  width: 70px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto; /* 👈 Center logo */
 }
 
 .dcc-title {
-  font-size: 20px;
   margin: 0;
-  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-align: center;
+}
+
+.dcc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 fieldset {
   border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  padding: 10px;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 legend {
-  font-size: 14px;
-  font-weight: bold;
-  padding: 0 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--blue);
+  padding: 0 0.3rem;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 6px;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  box-sizing: border-box;
+  font-size: 0.85rem;
 }
 
 textarea {
-  resize: vertical;
   min-height: 70px;
-}
-
-label {
-  display: block;
-  margin-top: 8px;
-  font-size: 13px;
-  font-weight: 500;
+  resize: vertical;
 }
 
 .btn {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 15px;
-  background: #007bff;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s ease-in-out;
+  align-self: center; /* 👈 Keep button small and centered */
+  margin-top: 0.8rem;
 }
 
 .btn:hover {
-  background: #0056b3;
+  background: linear-gradient(90deg, #025c92 0%, #007a86 74%);
 }
 
-/* Mobile tweaks */
-@media (max-width: 480px) {
-  .dcc-form {
-    padding: 15px;
+/* 📱 Small screens */
+@media (max-width: 400px) {
+  .dcc-container {
+    padding: 0.8rem;
   }
 
   .dcc-title {
-    font-size: 18px;
+    font-size: 1rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.8rem;
+    padding: 0.45rem;
   }
 }
