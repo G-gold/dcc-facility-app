@@ -2,7 +2,7 @@
   --white: #ffffff;
   --blue: #0367a6;
   --lightblue: #008997;
-  --max-width: 580px;  /* match login width */
+  --max-width: 680px; /* match login width */
 }
 
 *,
@@ -29,8 +29,8 @@ body {
   border-radius: 1rem;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: var(--max-width);  /* ✅ apply here */
-  margin: 0 auto;  /* centers it */
+  max-width: var(--max-width); /* ✅ apply here */
+  margin: 0 auto; /* centers it */
 }
 
 .dcc-header {
